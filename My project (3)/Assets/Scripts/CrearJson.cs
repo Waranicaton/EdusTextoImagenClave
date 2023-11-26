@@ -30,6 +30,7 @@ public class CrearJson : MonoBehaviour
         }
         InformacionTextos jsonObject = new InformacionTextos(nombres, posX, posY);
         string json = JsonConvert.SerializeObject(jsonObject);
-        File.WriteAllText("punto.txt", json);
+        File.WriteAllText(Buscador.imagePath.Substring(0, Buscador.imagePath.LastIndexOf('.')) + ".txt", json);
+        //Debug.Log(Buscador.imagePath.Substring(0, Buscador.imagePath.LastIndexOf('/')));
     }
 }

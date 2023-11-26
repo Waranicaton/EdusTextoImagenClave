@@ -6,11 +6,11 @@ public class Buscador : MonoBehaviour
 {
     private Texture2D texture;
     public Image imageObject;
+    public static string imagePath;
 
     public void OpenImageExplorer()
     {
-        string imagePath = UnityEditor.EditorUtility.OpenFilePanel("Seleccionar imagen", "", "png,jpg,jpeg");
-
+        imagePath = UnityEditor.EditorUtility.OpenFilePanel("Seleccionar imagen", "", "png,jpg,jpeg");
         if (!string.IsNullOrEmpty(imagePath))
         {
             Debug.Log("Ruta de la imagen seleccionada: " + imagePath);
